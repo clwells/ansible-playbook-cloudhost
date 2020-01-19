@@ -3,6 +3,10 @@
 ## Base Vars
 nexcess_repo_enabled: false
 server_selinux_enforcing: false
+server_mount_opts:
+  - point: "/"
+    opts: "defaults,noatime"
+server_mount_opts_remount: true
 mysql_pid_file: "/var/lib/mysql/mysqld.pid"
 
 ## IWorx Vars
@@ -19,6 +23,8 @@ iw_ssl_email: "ssladmin@nexcess.net"
 
 iw_symlink_base_php: true
 iw_symlink_base_php_path: "/opt/remi/php56/root/usr/bin/php"
+
+iw_release_channel: 'stable'
 
 ## PHP
 php_single_version: false
